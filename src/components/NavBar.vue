@@ -11,6 +11,14 @@
                 @click="minimizeWindow"
             ></div>
             <div
+                :class="{
+                    'iconfont icontext': true,
+                    'iconfont-quanping': !isMaximized,
+                    'iconfont-quxiaoquanping': isMaximized,
+                }"
+                @click="isMaximized = !isMaximized"
+            ></div>
+            <div
                 class="iconfont iconfont-guanbi icontext"
                 @click="closeWindow"
             ></div>
@@ -19,6 +27,18 @@
 </template>
 <script setup lang="ts">
 import { getCurrentWindow } from "@tauri-apps/api/window";
+import { ref, watch } from "vue";
+
+const isMaximized = ref<boolean>(false);
+watch(isMaximized, async (newVal) => {
+    if (newVal) {
+        // code to maximize window
+        await getCurrentWindow().maximize();
+    } else {
+        // code to restore window
+        await getCurrentWindow().unmaximize();
+    }
+});
 
 const minimizeWindow = async () => {
     await getCurrentWindow().minimize();
