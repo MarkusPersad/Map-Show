@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.icontext {
+    @apply hover:text-black dark:hover:text-white;
+}
