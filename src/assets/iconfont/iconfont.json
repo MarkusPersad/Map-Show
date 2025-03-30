@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "2376731",
+      "name": "灯光总开关",
+      "font_class": "dengguangzongkaiguan",
+      "unicode": "e75c",
+      "unicode_decimal": 59228
+    },
+    {
       "icon_id": "41834031",
       "name": "暗黑模式",
       "font_class": "anheimoshi",

@@ -1,8 +1,9 @@
 <template>
     <div class="w-full h-full">
         <div id="cesiumViewer" class="relative w-full h-full">
-            <slot></slot>
+            <slot name="toolbar"></slot>
         </div>
+        <slot></slot>
     </div>
 </template>
 <script setup lang="ts">
