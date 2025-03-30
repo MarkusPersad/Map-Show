@@ -1,7 +1,8 @@
 <template>
-    <div class="relative w-full h-full">
-        <div id="cesiumViewer" class="w-full h-full"></div>
-        <slot> </slot>
+    <div class="w-full h-full">
+        <div id="cesiumViewer" class="relative w-full h-full">
+            <slot></slot>
+        </div>
     </div>
 </template>
 <script setup lang="ts">

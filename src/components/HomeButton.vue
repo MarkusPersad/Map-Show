@@ -1,5 +1,8 @@
 <template>
-    <button class="btn btn-primary" @click="FlyToHome">Home</button>
+    <button
+        class="btn btn-accent dark:bg-gray-700 btn-square iconfont iconfont-home icontext"
+        @click="FlyToHome"
+    ></button>
 </template>
 <script setup lang="ts">
 import { inject } from "vue";

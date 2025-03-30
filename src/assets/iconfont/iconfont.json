@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "41834031",
+      "name": "暗黑模式",
+      "font_class": "anheimoshi",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "5320519",
+      "name": "太阳",
+      "font_class": "taiyang",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "11734460",
+      "name": "home,首页,主页",
+      "font_class": "home_icon",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
       "icon_id": "941656",
       "name": "最小化",
       "font_class": "zuixiaohua",

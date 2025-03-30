@@ -3,5 +3,5 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 .icontext {
-    @apply hover:text-black dark:hover:text-white;
+    @apply text-white dark:text-gray-500 hover:text-black dark:hover:text-white;
 }
