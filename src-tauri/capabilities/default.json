@@ -12,6 +12,14 @@
     "core:window:allow-maximize",
     "core:window:allow-unmaximize",
     "core:window:allow-unminimize",
-    "core:window:allow-minimize"
+    "core:window:allow-minimize",
+    {
+      "identifier": "http:default",
+      "allow": [
+        {
+          "url": "https://ipinfo.io/*"
+        }
+      ]
+    }
   ]
 }

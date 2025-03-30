@@ -5,6 +5,7 @@
         <HomeButton />
         <div class="flex-grow"></div>
         <LightButton />
+        <LocationButton />
         <FullScreenButton />
     </div>
 </template>
@@ -12,4 +13,5 @@
 import FullScreenButton from "./FullScreenButton.vue";
 import HomeButton from "./HomeButton.vue";
 import LightButton from "./LightButton.vue";
+import LocationButton from "./LocationButton.vue";
 </script>
