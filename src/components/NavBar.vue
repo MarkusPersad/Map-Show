@@ -1,7 +1,7 @@
 <template>
     <div
         data-tauri-drag-region
-        class="navbar bg-blue-400 dark:bg-gray-400 text-white dark:text-gray-500 w-screen"
+        class="navbar bg-blue-400 dark:bg-gray-400 text-white dark:text-gray-500 w-screen pt-0 pb-0 pr-2"
     >
         <div class="navbar-start"></div>
         <div class="navbar-center"></div>

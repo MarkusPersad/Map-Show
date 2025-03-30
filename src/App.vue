@@ -4,10 +4,7 @@
             <NavBar />
         </template>
         <template #context>
-            <VcViewer
-                :home="[73.5, 3.5, 135, 54]"
-                v-bind:class="['h-full w-full']"
-            >
+            <VcViewer :home="[73.5, 3.5, 135, 54]">
                 <ToolBar>
                     <HomeButton />
                 </ToolBar>

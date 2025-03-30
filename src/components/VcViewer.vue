@@ -1,9 +1,11 @@
 <template>
-    <div id="cesiumViewer" :class="attrs.class" class="relative"></div>
-    <slot> </slot>
+    <div class="relative w-full h-full">
+        <div id="cesiumViewer" class="w-full h-full"></div>
+        <slot> </slot>
+    </div>
 </template>
 <script setup lang="ts">
-import { onMounted, onUnmounted, provide, ref, useAttrs } from "vue";
+import { onMounted, onUnmounted, provide, ref } from "vue";
 import { Camera, Rectangle, Viewer } from "cesium";
 import { CesiumViewer } from "../types";
 
@@ -12,7 +14,6 @@ const props = defineProps<{
 }>();
 
 const _viewer = ref<Viewer | null>(null);
-const attrs = useAttrs();
 defineExpose({
     _viewer,
 });
