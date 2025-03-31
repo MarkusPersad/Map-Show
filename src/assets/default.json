@@ -1,6 +1,15 @@
 {
   "IONTOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjZDM0OTQyYy03OGJhLTQyYmItODRjOC0wZmViMWE4NjFmZDciLCJpZCI6MjUyNjkxLCJpYXQiOjE3NDI3MjUwNjF9.0KOK769mR-ybU9eU66QgHYl4Zzj_U-190WI0chbja5g",
-  "TIANDITU": "http://api.tianditu.gov.cn",
-  "GAODEMAP":"https://restapi.amap.com/v3",
-  "GAODEMAPTOKEN":"a563f5d2c996873a1d1ba5277fa0cc7d"
+  "TIANDITU":{
+    "BASEURL": "https://t{s}.tianditu.gov.cn/",
+    "IMAGERYURL":"DataServer?T=img_w&x={x}&y={y}&l={z}&tk=",
+    "VECTORIMAGERY":"vec_c/wmts?tk=",
+    "LABELIMAGERYURL":"cia_w/wmts?tk=",
+    "IBOIMAGERYURL":"DataServer?T=ibo_w&x={x}&y={y}&l={z}&tk=",
+    "TOKEN":"22130d55aa68622fe03b6eea381bc4bb",
+    "SUBDOMAINS" : ["0", "1", "2", "3", "4", "5", "6", "7"]
+  },
+  "GAODE":{
+    "LABELIMAGERYURL":"http://webst02.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scale=1&style=8"
+  }
 }

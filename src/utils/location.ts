@@ -23,7 +23,6 @@ export const get_location = async (height:number):Promise<Cartesian3> =>{
     try {
             let str = await invoke("get_location") as string
             let coords = str.split(',').map(str => parseFloat(str))
-            console.log(coords[0],coords[1])
             return Cartesian3.fromDegrees(coords[1],coords[0],height)
     } catch (error) {
             console.log(error)

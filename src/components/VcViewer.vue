@@ -13,6 +13,7 @@ import { CesiumViewer } from "../types";
 
 const props = defineProps<{
     home: [number, number, number, number];
+    baseLayer:any;
 }>();
 
 const _viewer = ref<Viewer | null>(null);
@@ -28,6 +29,7 @@ onMounted(() => {
         animation: false,
         sceneModePicker: false,
         baseLayerPicker: false,
+        baseLayer:props.baseLayer,
         timeline: false,
         projectionPicker: false,
         vrButton: false,
