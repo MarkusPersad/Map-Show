@@ -1,7 +1,7 @@
 <template></template>
 <script setup lang="ts">
 import { UrlTemplateImageryProvider, WebMercatorTilingScheme } from 'cesium';
-import { TIANDITU,GAODE } from "../assets/default.json"
+import { TIANDITU} from "../assets/default.json"
 import { inject, onMounted } from 'vue';
 import { CesiumViewer } from '../types';
 
@@ -21,7 +21,8 @@ const iboMap = new UrlTemplateImageryProvider({
     enablePickFeatures:false,
 })
 const labelMap = new UrlTemplateImageryProvider({
-    url:GAODE.LABELIMAGERYURL,
+    url:TIANDITU.BASEURL+TIANDITU.LABELIMAGERYURL+TIANDITU.TOKEN,
+    subdomains:TIANDITU.SUBDOMAINS,
     tilingScheme:new WebMercatorTilingScheme(),
     maximumLevel:18,
     enablePickFeatures:false,

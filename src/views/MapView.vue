@@ -3,7 +3,7 @@
         <template #toolbar>
             <ToolBar></ToolBar>
         </template>
-        <AsyncTianDiTu />
+        <AsyncImagery />
         <Suspense>
             <IonTerrainProvider />
         </Suspense>
@@ -14,7 +14,7 @@ import { defineAsyncComponent } from "vue";
 import IonTerrainProvider from "../components/IonTerrainProvider.vue";
 import ToolBar from "../components/ToolBar.vue";
 import VcViewer from "../components/VcViewer.vue";
-const AsyncTianDiTu = defineAsyncComponent(
-    () => import("../components/TianDiTuImagery.vue")
+const AsyncImagery = defineAsyncComponent(
+    () => import("../components/GaoDeImagery.vue")
 )
 </script>
