@@ -4,7 +4,7 @@
     "BASEURL": "https://t{s}.tianditu.gov.cn/",
     "IMAGERYURL":"DataServer?T=img_w&x={x}&y={y}&l={z}&tk=",
     "VECTORIMAGERY":"vec_c/wmts?tk=",
-    "LABELIMAGERYURL":"cia_w/wmts?tk=",
+    "LABELIMAGERYURL":"cia_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cia&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default.jpg&tk=", 
     "IBOIMAGERYURL":"DataServer?T=ibo_w&x={x}&y={y}&l={z}&tk=",
     "TOKEN":"22130d55aa68622fe03b6eea381bc4bb",
     "SUBDOMAINS" : ["0", "1", "2", "3", "4", "5", "6", "7"]

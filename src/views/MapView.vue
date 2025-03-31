@@ -15,6 +15,6 @@ import IonTerrainProvider from "../components/IonTerrainProvider.vue";
 import ToolBar from "../components/ToolBar.vue";
 import VcViewer from "../components/VcViewer.vue";
 const AsyncImagery = defineAsyncComponent(
-    () => import("../components/GaoDeImagery.vue")
+    () => import("../components/TianDiTuImagery.vue")
 )
 </script>

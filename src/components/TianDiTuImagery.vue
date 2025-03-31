@@ -1,6 +1,6 @@
 <template></template>
 <script setup lang="ts">
-import { UrlTemplateImageryProvider, WebMercatorTilingScheme } from 'cesium';
+import { UrlTemplateImageryProvider, WebMapTileServiceImageryProvider, WebMercatorTilingScheme } from 'cesium';
 import { TIANDITU} from "../assets/default.json"
 import { inject, onMounted } from 'vue';
 import { CesiumViewer } from '../types';
@@ -20,12 +20,15 @@ const iboMap = new UrlTemplateImageryProvider({
     maximumLevel:18,
     enablePickFeatures:false,
 })
-const labelMap = new UrlTemplateImageryProvider({
+const labelMap = new WebMapTileServiceImageryProvider({
     url:TIANDITU.BASEURL+TIANDITU.LABELIMAGERYURL+TIANDITU.TOKEN,
+    layer:"img",
+    style:"default",
+    format:"image/jpeg",
+    tileMatrixSetID:"GoogleMapsCompatible",
     subdomains:TIANDITU.SUBDOMAINS,
     tilingScheme:new WebMercatorTilingScheme(),
     maximumLevel:18,
-    enablePickFeatures:false,
 })
 onMounted(()=>{
     if(_viewer?.value){
