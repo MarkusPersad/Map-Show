@@ -3,6 +3,7 @@
         class="flex space-x-2"
         @mouseenter="isShow = true"
         @mouseleave="isShow = false"
+        @keydown.enter="FlyToGeoCoder"
     >
         <input
             v-show="isShow"
@@ -39,6 +40,7 @@ const FlyToGeoCoder = async () => {
                     1000,
                 ),
             });
+            keyWord.value = "";
         }
     } catch (error) {
         console.error(error);
