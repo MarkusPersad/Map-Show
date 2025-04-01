@@ -18,6 +18,9 @@
       "allow": [
         {
           "url": "https://ipinfo.io/*"
+        },
+        {
+          "url": "http://api.tianditu.gov.cn/*"
         }
       ]
     }
