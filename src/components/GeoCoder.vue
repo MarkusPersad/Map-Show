@@ -1,5 +1,9 @@
 <template>
-    <div class="flex" @mouseenter="isShow = true" @mouseleave="isShow = false">
+    <div
+        class="flex space-x-2"
+        @mouseenter="isShow = true"
+        @mouseleave="isShow = false"
+    >
         <input
             v-show="isShow"
             type="text"
@@ -25,11 +29,19 @@ const keyWord = defineModel<string>({
     default: () => "",
 });
 const FlyToGeoCoder = async () => {
-    let location = await geocoder(keyWord.value);
-    if (_viewer?.value) {
-        _viewer.value.camera.flyTo({
-            destination: Cartesian3.fromDegrees(location[0], location[1], 1000),
-        });
+    try {
+        let location = await geocoder(keyWord.value);
+        if (_viewer?.value) {
+            _viewer.value.camera.flyTo({
+                destination: Cartesian3.fromDegrees(
+                    location[0],
+                    location[1],
+                    1000,
+                ),
+            });
+        }
+    } catch (error) {
+        console.error(error);
     }
 };
 </script>

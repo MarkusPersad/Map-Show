@@ -9,11 +9,15 @@
     "TOKEN": "22130d55aa68622fe03b6eea381bc4bb",
     "API": "http://api.tianditu.gov.cn/",
     "GEOCODER": "geocoder",
-    "SUBDOMAINS": ["0", "1", "2", "3", "4", "5", "6", "7"]
+    "SUBDOMAINS": ["0", "1", "2", "3", "4", "5", "6", "7"],
+    "SERVERTOKEN": "8cdbabd3a8c9651ad5f46d6f1ef22671"
   },
   "GAODE": {
     "LABELIMAGERYURL": "http://webst02.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scale=1&style=8",
     "IMAGERYURL": "https://webst02.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}",
     "VECTORIMAGERY": "http://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}"
+  },
+  "API": {
+    "BASEURL": "http://127.0.0.1:8080/"
   }
 }
