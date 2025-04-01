@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "6481723",
+      "name": "山地",
+      "font_class": "shandi",
+      "unicode": "e758",
+      "unicode_decimal": 59224
+    },
+    {
       "icon_id": "58331",
       "name": "search",
       "font_class": "search",

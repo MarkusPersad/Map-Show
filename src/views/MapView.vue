@@ -5,7 +5,7 @@
         </template>
         <AsyncImagery />
         <Suspense>
-            <IonTerrainProvider />
+            <IonTerrainProvider v-if="terrainShow" />
         </Suspense>
     </VcViewer>
 </template>
@@ -14,7 +14,10 @@ import { defineAsyncComponent } from "vue";
 import IonTerrainProvider from "../components/IonTerrainProvider.vue";
 import ToolBar from "../components/ToolBar.vue";
 import VcViewer from "../components/VcViewer.vue";
+import { useTerrain } from "../store";
+import { storeToRefs } from "pinia";
 const AsyncImagery = defineAsyncComponent(
-    () => import("../components/TianDiTuImagery.vue")
-)
+    () => import("../components/GaoDeImagery.vue"),
+);
+const { terrainShow } = storeToRefs(useTerrain());
 </script>

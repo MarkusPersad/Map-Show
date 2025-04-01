@@ -2,7 +2,7 @@
     <button
         class="btn btn-accent dark:bg-gray-700 btn-square iconfont iconfont-dengguangzongkaiguan"
         :class="{
-            'text-yellow-300': isLighting,
+            'text-yellow-500': isLighting,
             'text-gray-300': !isLighting,
         }"
         @click="isLighting = !isLighting"
