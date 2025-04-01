@@ -9,7 +9,9 @@
         <template #context>
             <RouterView v-slot="{ Component }">
                 <Transition name="fade">
-                    <component :is="Component" />
+                    <KeepAlive :include="['MapView']">
+                        <component :is="Component" />
+                    </KeepAlive>
                 </Transition>
             </RouterView>
         </template>
@@ -19,4 +21,5 @@
 import NavBar from "./components/NavBar.vue";
 import Sider from "./components/Sider.vue";
 import Layout from "./views/Layout.vue";
+import { RouterView } from "vue-router";
 </script>
