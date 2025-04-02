@@ -7,6 +7,7 @@ import {
     createWorldTerrainAsync,
     EllipsoidTerrainProvider,
     Ion,
+    ShadowMode,
     WebMercatorTilingScheme,
 } from "cesium";
 import { onUnmounted } from "vue";
@@ -18,14 +19,13 @@ const IonWorldTerrain = await createWorldTerrainAsync({
 const _viewer = inject<CesiumViewer>("_viewer");
 onMounted(async () => {
     if (Ion.defaultAccessToken && _viewer?.value) {
-        _viewer.value.resolutionScale = window.devicePixelRatio;
-        _viewer.value.scene.postProcessStages.fxaa.enabled = true;
-        _viewer.value.scene.verticalExaggeration = 2.0;
+        _viewer.value.terrainShadows = ShadowMode.ENABLED;
         _viewer.value.terrainProvider = IonWorldTerrain;
     }
 });
 onUnmounted(() => {
     if (_viewer?.value) {
+        _viewer.value.terrainShadows = ShadowMode.DISABLED;
         _viewer.value.terrainProvider = new EllipsoidTerrainProvider({
             tilingScheme: new WebMercatorTilingScheme(),
         });

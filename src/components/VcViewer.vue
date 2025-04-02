@@ -13,7 +13,7 @@ import { CesiumViewer } from "../types";
 
 const props = defineProps<{
     home: [number, number, number, number];
-    baseLayer:any;
+    baseLayer: any;
 }>();
 
 const _viewer = ref<Viewer | null>(null);
@@ -29,7 +29,7 @@ onMounted(() => {
         animation: false,
         sceneModePicker: false,
         baseLayerPicker: false,
-        baseLayer:props.baseLayer,
+        baseLayer: props.baseLayer,
         timeline: false,
         projectionPicker: false,
         vrButton: false,
@@ -37,6 +37,9 @@ onMounted(() => {
         navigationHelpButton: false,
     });
     if (_viewer.value) {
+        _viewer.value.resolutionScale = window.devicePixelRatio;
+        _viewer.value.scene.postProcessStages.fxaa.enabled = true;
+        _viewer.value.scene.verticalExaggeration = 2.0;
         _viewer.value.creditDisplay.container.style.display = "none";
         Camera.DEFAULT_VIEW_RECTANGLE = Rectangle.fromDegrees(...props.home);
         _viewer.value.camera.flyHome(2.0);
