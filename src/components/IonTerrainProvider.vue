@@ -19,13 +19,15 @@ const IonWorldTerrain = await createWorldTerrainAsync({
 const _viewer = inject<CesiumViewer>("_viewer");
 onMounted(async () => {
     if (Ion.defaultAccessToken && _viewer?.value) {
-        _viewer.value.terrainShadows = ShadowMode.ENABLED;
+        _viewer.value.terrainShadows = ShadowMode.RECEIVE_ONLY;
+        _viewer.value.scene.globe.depthTestAgainstTerrain = true;
         _viewer.value.terrainProvider = IonWorldTerrain;
     }
 });
 onUnmounted(() => {
     if (_viewer?.value) {
         _viewer.value.terrainShadows = ShadowMode.DISABLED;
+        _viewer.value.scene.globe.depthTestAgainstTerrain = false;
         _viewer.value.terrainProvider = new EllipsoidTerrainProvider({
             tilingScheme: new WebMercatorTilingScheme(),
         });
