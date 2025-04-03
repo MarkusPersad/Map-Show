@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "35986972",
+      "name": "放大",
+      "font_class": "fangda",
+      "unicode": "e75d",
+      "unicode_decimal": 59229
+    },
+    {
+      "icon_id": "35986994",
+      "name": "缩小",
+      "font_class": "suoxiao",
+      "unicode": "e75f",
+      "unicode_decimal": 59231
+    },
+    {
       "icon_id": "6481723",
       "name": "山地",
       "font_class": "shandi",

@@ -7,6 +7,7 @@
         <Suspense>
             <IonTerrainProvider v-if="terrainShow" />
         </Suspense>
+        <HawkEyeMap />
     </VcViewer>
 </template>
 <script setup lang="ts">
@@ -16,6 +17,7 @@ import ToolBar from "../components/ToolBar.vue";
 import VcViewer from "../components/VcViewer.vue";
 import { useTerrain } from "../store";
 import { storeToRefs } from "pinia";
+import HawkEyeMap from "../components/HawkEyeMap.vue";
 const AsyncImagery = defineAsyncComponent(
     () => import("../components/GaoDeImagery.vue"),
 );
