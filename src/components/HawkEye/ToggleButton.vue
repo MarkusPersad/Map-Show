@@ -1,6 +1,6 @@
 <template>
     <button
-        class="btn btn-square btn-accent dark:bg-gray-700 iconfont icontext opacity-75"
+        class="btn btn-square btn-accent dark:bg-gray-700 iconfont icontext opacity-50 hover:opacity-100"
         :class="{
             'iconfont-fangda fixed right-0 bottom-0': !isShow,
             'iconfont-suoxiao absolute top-0 left-0': isShow,
