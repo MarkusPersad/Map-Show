@@ -1,8 +1,7 @@
 <template>
     <div
         class="flex space-x-2"
-        @mouseenter="isShow = true"
-        @mouseleave="isShow = false"
+        @mouseover="isShow = true"
         @keydown.enter="FlyToGeoCoder"
     >
         <input
@@ -23,7 +22,6 @@ import { inject, ref } from "vue";
 import { geocoder } from "../http";
 import { CesiumViewer } from "../types";
 import { Cartesian3 } from "cesium";
-
 const _viewer = inject<CesiumViewer>("_viewer");
 const isShow = ref(false);
 const keyWord = defineModel<string>({
@@ -40,6 +38,7 @@ const FlyToGeoCoder = async () => {
                     1000,
                 ),
             });
+            isShow.value = false;
             keyWord.value = "";
         }
     } catch (error) {

@@ -62,6 +62,6 @@ const minimizeWindow = async () => {
 };
 
 const closeWindow = async () => {
-    await getCurrentWindow().close();
+    await getCurrentWindow().hide();
 };
 </script>
